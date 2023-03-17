@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>食糧管理</title>
+  <link rel="stylesheet" href="/css/style.css">  
+ </head>
+ <body>
+
+  <header>
+    <a href="/" class="link-to-top">食糧管理</a>
+    <a href="/list" class="return-to-list">一覧に戻る</a>
+    <% if(locals.isLoggedIn) { %>
+    <a href="/logout" class="logout2">ログアウト</a>
+    <% } %>
+    <div class="clear"></div>
+   </header>
+   
+  <div class="create-form">
+   <h1>新しく登録する</h1>
+   <form action="/new" method="post">
+     <p>食品名</p>
+     <input type="text" name="itemName">
+     <p>個数</p>
+     <select name="count">
+         <option>選択してください</option>
+         <% for(let i = 1; i <= 10; i++) { %>
+         <option><%= i %></option>
+         <% } %>
+     </select>
+     <p>賞味期限</p>
+     <input type="date" name="date">
+     <br>
+     <input type="submit" value="登録" class="register">
+   </form>
+  </div>
+
+ </body>
+</html> 
