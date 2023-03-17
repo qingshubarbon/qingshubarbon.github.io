@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>食糧管理</title>
+  <link rel="stylesheet" href="/css/style.css">  
+ </head>
+ <body>
+
+  <%- include('header'); %>
+   <div class="panel">   
+    <% if (errors.length > 0) { %>
+      <ul class="errors"></ul>
+        <% errors.forEach((error) => { %>
+          <li><%= error %></li>
+       <% }) %>
+      </ul> 
+    <% } %>
+   </div>
+   <div class="signup-form">
+    <h1>新規登録</h1>
+    <h2>登録項目は全て真面目に記入する必要はありません。</h2>
+    <form action="/signup" method="post">
+      <p>ユーザー名</p>
+      <input type="text" name="username">
+      <p>メールアドレス</p>
+      <input type="text" name="email">
+      <p>パスワード</p>
+      <input type="password" name="password">
+      <br>
+      <input type="submit" value="登録" class="signup">
+    </form>
+   </div>
+ </body>
+</html>
