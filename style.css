@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: left;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.9);
+  position :fixed;
+  z-index: 3;
+  top: 0;
+}
+
+header h1 {
+  color: white;
+  text-align: center;
+}
+
+.main {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.main a {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.return {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.link-to-top {
+  color: #323A45;
+  float: left;
+  color: white;
+  line-height: 65px;
+  font-size: 20px;
+  margin-left: 50px; 
+  display: inline;
+}
+
+.logout {
+  margin-left: 1200px;
+  color: white;
+  line-height: 65px;
+  margin-right: 50px;
+  font-size: 20px;
+  display: inline;
+}
+
+.logout2 {
+  margin-left: 1100px;
+  color: white;
+  line-height: 65px;
+  margin-right: 50px;
+  font-size: 20px;
+  display: inline;
+}
+
+.signup {
+  margin-top: 50px;
+}
+
+.signup-form {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.signup-form p {
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+.login-form {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.login-form p {
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+.login {
+  margin-top: 50px;
+}
+
+.errors {
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+  list-style: none;
+  color: red;
+  border: 1px solid #e29a9a;
+  background-color: #fff;
+  padding: 12px 34px;
+  margin-top: 100px;
+}
+
+.title {
+  text-align: center;
+}
+
+.hello {
+  text-align: center;
+  padding-top: 100px;
+}
+
+#scrollTopBtn {
+  margin-left: 1350px;
+  position: fixed;
+  margin-top: 600px;
+  z-index: 2;
+  font-size: 24px;
+  width: 52px;
+  height: 52px;
+  padding-top: 13px;
+  border-radius: 50%;
+  color: #e3e3e3;
+  background: rgba(94, 144, 255, 0.75);
+  text-align: center;
+}
+
+#scrollTopBtn:hover {
+  cursor: pointer;
+  color: #e3e3e3;
+  background-color: rgb(94, 144, 255);
+}
+
+.create {
+  margin-left: 1300px;
+  background: #80bcff;
+  border-radius: 30px;
+  font-size: 14px;
+  width: 120px;
+  height: 45px;
+  line-height: 43px;
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid #80bcff;
+  padding: 15px;
+}
+
+.create:hover {
+  background-color: #ffffff;
+  color: #80bcff;
+  transition: all 0.3s ease;
+}
+
+.food-list {
+  margin-top: 50px;
+}
+
+.food-list li {
+  list-style: none;
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 10px;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.food-detail {
+  position: relative;  
+}
+
+.food-count {
+  position: absolute;
+  left: 700px
+}
+
+
+.expiredDate {
+  position: absolute;
+  left: 800px;
+}
+
+.food-menu {
+  display: flex;
+  margin-left: 100px;
+  position: absolute;
+  left: 1000px;
+}
+
+.food-menu form input {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color:#bac6d3;
+}
+
+.food-menu form input:hover {
+  color: #ff7f8c;
+  transition: all 0.3s ease;
+}
+
+.food-menu a {
+  margin-left: 50px;
+  text-decoration: none;
+  color: #bac6d3;
+}
+
+.food-menu a:hover {
+  color: #80bcff;
+}
+
+.return-to-list {
+  color: white;
+  margin-left: 45px;
+  line-height: 65px;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.create-form {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.create-form p {
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+.register {
+  margin-top: 50px;
+}
+
+.edit-form {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.edit-form p {
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
