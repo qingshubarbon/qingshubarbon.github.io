@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charest="utf-8">
+  <title>食糧管理</title>
+  <link rel="stylesheet" href="/css/style.css">
+ </head>
+ <body>
+   <%- include('header'); %>
+   <div class="panel">
+    <% if(errors.length > 0) { %>
+      <ul class="errors">
+        <% errors.forEach((error) => { %>
+          <li><%= error %></li>
+        <% }) %>
+      </ul>
+    <% } %>
+   </div>
+   <div class="login-form">
+    <h1>ログインする</h1>
+    <form action="/login" method="post">
+      <p>メールアドレス</p>
+      <input type="text" name="email">
+      <p>パスワード</p>
+      <input type="password" name="password">
+      <br>
+      <input type="submit" value="ログイン" class="login">
+    </form>
+   </div>
+ </body>
+</html>
