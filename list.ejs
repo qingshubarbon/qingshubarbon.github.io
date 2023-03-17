@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>食糧管理</title>
+  <link rel="stylesheet" href="/css/style.css"> 
+  <script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+  <script src="/jquery/jquery-3.6.4.min.js"></script>
+  <link href="https://use.fontawesome.com/releases/v6.3.0/css/all.css" rel="stylesheet">
+  <script>
+    $(document).ready(function() {
+      $('#scrollTopBtn').click(function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+      });
+    $('#scrollTopBtn').hover(
+      function() {
+        $('#scrollTopBtn').animate({
+          'font-size': '30px'
+        }, 300);
+      },
+      function() {
+        $('#scrollTopBtn').animate({
+          'font-size': '24px'
+        }, 300);
+      }
+    );
+  }); 
+  </script>
+ </head>
+ <body>
+
+ <% if(locals.isLoggedIn) { %>
+
+  <%- include('header'); %>
+
+  
+
+  <span class="fa-solid fa-arrow-up" id="scrollTopBtn"></span>
+
+  <% if(locals.isLoggedIn) { %>
+  <h1 class="hello">ようこそ、<%= locals.username %>様</h1>
+  <% } %>
+  
+
+
+  <div class="food-list">
+   <h1 class="title">食糧一覧</h1>
+   <a href="/new" class="create">+ 新規作成</a>
+   <ul>
+    <% foods.forEach((food) => { %>
+     <li>
+      <div class="food-detail">      
+        <span><%= food.item %></span>
+      </div>
+      <div class="food-count">
+        <% const foodCount = food.count + "個" %>
+        <span><%= foodCount %></span>
+      </div>
+      <div class="expiredDate">
+        <% const date = new Date(food.date); 
+           const year = date.getFullYear();
+           const month = ("0" + (date.getMonth() + 1)).slice(-2);
+           const day = ("0" + date.getDate()).slice(-2);
+           const formattedDate = `${year}年${month}月${day}日`;
+        %>
+      
+        <span><%= formattedDate %></span>
+      </div>
+      <div class="food-menu">
+       <form action="/delete/<%= food.id %>" method="post">
+         <input type="submit" value="削除">
+       </form>
+       <a href="/edit/<%= food.id %>">編集</a>
+      </div>
+     </li>
+    <% }) %>   
+   </ul> 
+  </div>
+  <% } else { %>
+    <h1>ログインできていません</h1>
+    <a href="/signup">新規登録する</a>
+    <a href="/login">ログインする</a>
+  <% } %>
+  <script src="script.js"></script>
+ </body>
+</html>
